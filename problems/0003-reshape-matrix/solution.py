@@ -13,13 +13,12 @@ def reshape_matrix(a: list[list[int|float]], new_shape: tuple[int, int]) -> list
 	
 
 	# i did my own implmentation of reshaping matrix
-
-	# for irow in range(rowlen):
-	# 	for icol in range(0, collen, new_shape[1]):
-	# 		new_row = a[irow][icol:icol + new_shape[1]]
-	# 		reshaped_matrix.append(new_row)
+	for irow in range(rowlen):
+		for icol in range(0, collen, new_shape[1]):
+			new_row = a[irow][icol:icol + new_shape[1]]
+			reshaped_matrix.append(new_row)
 		
 
 	# or using numpy 
-	return np.array(a).reshape(new_shape).tolist()
-	# return reshaped_matrix
+	# return np.array(a).reshape(new_shape).tolist()
+	return reshaped_matrix
